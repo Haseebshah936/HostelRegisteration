@@ -13,7 +13,7 @@ mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to the database."));
 
-app.listen(process.env.PORT || 4000);
+app.listen(process.env.PORT || 80);
 
 app.use(express.static("public"));
 app.use(cors());
