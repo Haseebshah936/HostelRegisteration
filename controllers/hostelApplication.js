@@ -11,6 +11,7 @@ export const getApplications = async (req, res) => {
 
 export const createApplication = async (req, res) => {
   const newApplicant = new hostelApplicationModel(req.body);
+  console.log(req.body);
   try {
     await newApplicant.save();
     res.json(newApplicant);
