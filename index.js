@@ -1,5 +1,5 @@
 import bodyParser from "body-parser";
-import cors from "cors";
+// import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
 import hostelApplications from "./routes/hostelApplication.js";
@@ -13,10 +13,10 @@ mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to the database."));
 
-app.listen(process.env.PORT || 80);
+app.listen(process.env.PORT || 5000);
 
 app.use(express.static("public"));
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/hostelApplicants", hostelApplications);
